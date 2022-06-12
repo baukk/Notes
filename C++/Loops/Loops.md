@@ -1,7 +1,7 @@
 A loop is a sequence of instructions which is repeated until certain condition is met.
 
 
-            Two Types of Loops
+                                                                        Two Types of Loops
 
 1)   Entry controlled loops: For Loop and While loop
 
