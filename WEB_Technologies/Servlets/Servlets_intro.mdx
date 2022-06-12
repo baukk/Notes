@@ -1,6 +1,49 @@
-----------------------SERVLETS---------------------------
+# ------------------------------------SERVLETS-------------------------------
+
+## ------------------------------------**STATIC PAGE VS DYNAMIC PAGE**--------------------------------
+
+**STATIC PAGE**: Static Page is where Prebuilt content is same every time the page is loaded.
+
+**DYNAMIC PAGE**: Dynamic page is where Content is generated quickly and changes regularly according to request.
+				  The page contains "server-side" code which allows the server to generate the unique content when the page is loaded.		
 
 
 ![image](https://user-images.githubusercontent.com/76152244/173230676-01cdb084-bcc3-4c57-ab9e-0c24303506b7.png)
 
+When a user browses internet, they request for web pages according to their needs. If it's a static web page, request is sent to the client and it respponds with the static HTML page.
+But, when its a *Dynamic WebPage*, the webpage is not found to be on the server. The request then goes to a helper application, also called *Web Container* (TomCat).
+The web Container consists of servlets.
 
+**SERVLETS** : A servlet is basically a java file which takes request from the client, processes the information and then sends the response to the client in the form of an HTML file.
+
+**DEPLOYMENT DESCRIPTOR:** The deployment descriptor is the file used by the servlet container to define which servlets match up with which request(URLs). A we.xml file in this case
+
+**STRUCTURE OF WEB.XML FILE:**
+```
+<web-app>
+
+  <servlet>
+    <servlet-name>[SERVLET NAME]</servlet-name>
+    <servlet-class>[SERVLET CLASS]</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>[SERVLET NAME]</servlet-name>
+    <url-pattern>[SERVLET URL]</url-pattern>
+  </servlet-mapping>
+</web-app>    
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+23:20
