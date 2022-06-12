@@ -62,7 +62,8 @@ public class AddServlet extends HttpServlet
 	int i= Integer.parseInt(req.getParameter("num1"));
 	int j= Integer.parseInt(req.getParameter("num2"));
 	int k= i+j;
-	System.out.println("The result is "+k);
+	System.out.println("The result is "+k);  //print on conseole
+	resp.getWriter().println("The result is "+k); //print on browser
 	}
 }
 ```
@@ -70,7 +71,42 @@ public class AddServlet extends HttpServlet
 Just these two files are not enough. The HTML file is the clients request. The servlet file is the server processing. the haven't been yet connected. The Deployment descriptor comes into place now.
 We create a Web.xml file which mentions all servlets and maps their respective URLs
 
+```
+<web-app>
+  <servlet>
+    <servlet-name>abc</servlet-name>
+    <servlet-class>com.random.AddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>abc</servlet-name>
+    <url-pattern>/add</url-pattern>
+  </servlet-mapping>
+</web-app>
+```
 
 
 
-23:20
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
