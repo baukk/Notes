@@ -35,13 +35,40 @@ The web Container consists of servlets.
 ```
 
 
+# -----------------------Creating first project------------------
 
+### Create an HTML page to send request.
 
+index.html
 
+```
+<html>
+	<body>
+		<form action="add">
+		Enter first value <input type="text" name="num1">
+		Enter second value <input type="text" name="num2">
+		<input type="submit">
+		</form>
+	</body>
+</html>
+```
+## Create a new class in a java file ie. servlet (AddServlet.java)
 
+```
+import jakarta.servlet.https.*;
+public class AddServlet extends HttpServlet
+{
+	public void service(HttpServletRequest req, HttpServletResponse resp){
+	int i= Integer.parseInt(req.getParameter("num1"));
+	int j= Integer.parseInt(req.getParameter("num2"));
+	int k= i+j;
+	System.out.println("The result is "+k);
+	}
+}
+```
 
-
-
+Just these two files are not enough. The HTML file is the clients request. The servlet file is the server processing. the haven't been yet connected. The Deployment descriptor comes into place now.
+We create a Web.xml file which mentions all servlets and maps their respective URLs
 
 
 
