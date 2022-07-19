@@ -1,0 +1,1 @@
+{"name":"Local: rnd","url":"d:\\Notes\\C++\\random\\rnd.cpp","tests":[{"id":1655582627905,"input":"6\n1 4 6 2 8 9\n2\n2 4","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Notes\\C++\\random\\rnd.cpp","group":"local","local":true}
